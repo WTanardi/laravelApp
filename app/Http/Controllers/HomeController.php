@@ -9,7 +9,6 @@ class HomeController extends Controller
     public function home()
     {
         // dd(auth()->check());
-       return view ('/index.index');
-
+        return view("/index.index");
     }
 }

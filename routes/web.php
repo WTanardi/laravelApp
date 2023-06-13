@@ -1,7 +1,5 @@
 <?php
 
-
-
 use Illuminate\Http\Request;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
@@ -24,104 +22,46 @@ use App\Http\Controllers\PostinganController;
 |
 */
 
-Route::get('/about', function () {
-    return view('About');
+Route::get("/about", function () {
+    return view("About");
 });
 
-Route::get('/index', [HomeController::class, 'home']);
-Route::get('/', function(){ return redirect('/index'); });
-
+Route::get("/index", [HomeController::class, "home"]);
+Route::get("/", function () {
+    return redirect("/index");
+});
 
 // Route::resource('/store', [DashboardController::class, 'index']);
 
+Route::get("/index/login", [LoginController::class, "login"])
+    ->name("login")
+    ->middleware("guest");
+Route::post("/login/store", [LoginController::class, "authenticate"]);
+Route::post("/logout", [LoginController::class, "logout"]);
 
-Route::get('/index/login', [LoginController::class, 'login'])->name ('login')->middleware('guest');
-Route::post('/login/store', [LoginController::class, 'authenticate']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::get("index/register", [RegisterController::class, "index"])->middleware(
+    "guest"
+);
+Route::get("index/testing", [RegisterController::class, "index"]);
+Route::post("/register/store", [RegisterController::class, "store"]);
 
-Route::get('index/register', [RegisterController::class, 'index'])->middleware('guest');
-Route::get('index/testing', [RegisterController::class, 'index']);
-Route::post('/register/store', [RegisterController::class, 'store']);
-
--
-Route::get('/dashboard', function () {
-    return view('dashboard.index');
+Route::get("/dashboard", function () {
+    return view("dashboard.index");
 });
 
-
-Route::get('jelajahi', [JelajahiController::class, 'index']) -> middleware ('auth');
-
-Route::get('/jelajahi/alam', [PostController::class, 'alam']);
-Route::get('/jelajahi/budaya', [PostController::class, 'budaya']);
-Route::get('/jelajahi/kuliner', [PostController::class, 'kuliner']);
-
-Route::get('/jelajahi/{post}', [PostController::class, 'show']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/postingan', [PostinganController::class, 'index']);
-Route::get('postingan/create', [PostinganController::class, 'create']);
-Route::post('postingan/create', [PostinganController::class, 'store']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Route::get("jelajahi", [JelajahiController::class, "index"])->middleware(
+    "auth"
+);
+
+Route::get("/jelajahi/alam", [PostController::class, "alam"]);
+Route::get("/jelajahi/budaya", [PostController::class, "budaya"]);
+Route::get("/jelajahi/kuliner", [PostController::class, "kuliner"]);
+
+Route::get("/jelajahi/{post}", [PostController::class, "show"]);
+
+Route::get("/postingan", [PostinganController::class, "index"]);
+Route::get("postingan/create", [PostinganController::class, "create"]);
+Route::post("postingan/create", [PostinganController::class, "store"]);
 
 // Route::resource('/dashboard/posts', DashboardPostController::class) -> middleware('auth');
 
@@ -134,4 +74,3 @@ Route::post('postingan/create', [PostinganController::class, 'store']);
 //         "posts" => $kategori
 //     ]);
 // });
-

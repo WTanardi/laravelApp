@@ -10,13 +10,13 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $guarded = ["id"];
 
-    protected $fillable = ['title', 'category_id', 'excerpt', 'body'];
+    protected $fillable = ["title", "category_id", "excerpt", "body"];
     public $timestamps = false;
 
     public function Category()
     {
-        return $this-> belongsTo (Category::class);
+        return $this->belongsTo(Category::class);
     }
 }

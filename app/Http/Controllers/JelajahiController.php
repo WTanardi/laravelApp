@@ -10,6 +10,6 @@ class JelajahiController extends Controller
     public function index()
     {
         // dd(Auth::user());
-        return view ('/jelajahi/index');
+        return view("/jelajahi/index");
     }
 }
