@@ -9,31 +9,42 @@
   <body class="bg-light">
     <main class="container">
        <!-- START FORM -->
-       <form action='{{ url ('postingan/create') }}' method="POST">
+        @if ($errors-> any())
+        <div class="pt-3">
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors -> all() as $item)
+                    <li> {{ $item }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+        @endif
+       <form action='{{ url ('postingan') }}' method="POST">
         @csrf
         <div class="my-3 p-3 bg-body rounded shadow-sm">
             <div class="mb-3 row">
                 <label for="nim" class="col-sm-2 col-form-label">Kategoriii</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" name='category_id' id="nim">
+                    <input type="number" class="form-control" name='category_id' value="{{ Session::get ('category_id') }}" id="nim">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="nama" class="col-sm-2 col-form-label">Title</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name='title' id="nama">
+                    <input type="text" class="form-control" name='title' value="{{ Session::get ('title') }}" id="nama">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="jurusan" class="col-sm-2 col-form-label">Excerpt</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name='excerpt' id="jurusan">
+                    <input type="text" class="form-control" name='excerpt' value="{{ Session::get ('excerpt') }}" id="jurusan">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="jurusan" class="col-sm-2 col-form-label">Body</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name='body' id="jurusan">
+                    <input type="text" class="form-control" name='body' value="{{ Session::get ('body') }}" id="jurusan">
                 </div>
             </div>
             <div class="mb-3 row">
