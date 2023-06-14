@@ -73,6 +73,12 @@ class PostinganController extends Controller
 
     }
 
+    function delete($id) {
+        Post::where('title', $id)-> delete();
+        return redirect()->to('postingan')-> with('Success', 'Berhasil mnghapus data');
+
+    }
+
 }
 
 

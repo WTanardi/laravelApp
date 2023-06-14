@@ -84,6 +84,7 @@ Route::get("postingan/create", [PostinganController::class, "create"]);
 Route::post("postingan", [PostinganController::class, "store"]);
 Route::get("postingan/{title}", [PostinganController::class, "edit"]);
 Route::post("postingan/{title}", [PostinganController::class, "update"]);
+Route::post("postingan/{title}/delete", [PostinganController::class, "delete"]);
 
 // Route::resource('/dashboard/posts', DashboardPostController::class) -> middleware('auth');
 

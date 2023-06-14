@@ -53,7 +53,11 @@
                             <td>{{ $item-> body }}</td>
                             <td>
                                 <a href='{{ url ('postingan/'. $item->title) }}' class="btn btn-warning btn-sm">Edit</a>
-                                <a href='' class="btn btn-danger btn-sm">Del</a>
+                                <form onsubmit="return confirm('Yakin ingin menghapus data?')" class='d-inline' action="{{ url('postingan/'. $item-> title. '/delete')}}"
+                                    method="post">
+                                    @csrf
+                                    <button type="submit" name="submit" class="btn btn-danger btn-sm"> Del</button>
+                                </form>
                             </td>
                         </tr>
                         <?php $i++ ?>
