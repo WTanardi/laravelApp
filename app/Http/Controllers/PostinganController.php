@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Redirect;
 
 class PostinganController extends Controller
 {
@@ -45,6 +46,33 @@ class PostinganController extends Controller
         Post::create($data);
         return redirect()-> to ('postingan')-> with('Success, berhasil membuat data');
     }
+
+    public function edit($id) {
+        $data = Post::where('title', $id)->first();
+        return view ('postingan/edit', ['data' => $data]);
+    }
+
+
+        public function update(Request $request, $id)
+    {
+        $request->validate([
+            'excerpt' => 'required',
+            'body' => 'required',
+        ], [
+            'excerpt.required' => 'Excerpt tidak boleh kosong',
+            'body.required' => 'Body tidak boleh kosong',
+        ]);
+
+        $data = [
+            'excerpt' => $request->excerpt,
+            'body' => $request->body,
+        ];
+
+        Post::where('title', $id)->update($data);
+        return redirect()->to('postingan')->with('Success', 'Berhasil mengubah data');
+
+    }
+
 }
 
 

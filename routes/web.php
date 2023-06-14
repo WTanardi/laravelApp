@@ -59,9 +59,31 @@ Route::get("/jelajahi/kuliner", [PostController::class, "kuliner"]);
 
 Route::get("/jelajahi/{post}", [PostController::class, "show"]);
 
-Route::get("/postingan", [PostinganController::class, "index"]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get("postingan", [PostinganController::class, "index"]);
 Route::get("postingan/create", [PostinganController::class, "create"]);
-Route::post("postingan/create", [PostinganController::class, "store"]);
+Route::post("postingan", [PostinganController::class, "store"]);
+Route::get("postingan/{title}", [PostinganController::class, "edit"]);
+Route::post("postingan/{title}", [PostinganController::class, "update"]);
 
 // Route::resource('/dashboard/posts', DashboardPostController::class) -> middleware('auth');
 

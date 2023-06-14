@@ -15,6 +15,8 @@ return new class extends Migration {
             $table->string("name")->unique();
             $table->string("Deskripsi")->unique();
             $table->timestamps();
+
+            // $table->primary('id');
         });
     }
 

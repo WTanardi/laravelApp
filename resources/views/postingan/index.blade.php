@@ -29,7 +29,7 @@
 
                 <!-- TOMBOL TAMBAH DATA -->
                 <div class="pb-3">
-                  <a href='postingan/create' class="btn btn-primary">+ Tambah Data</a>
+                  <a href='postingan/create' class="btn btn-primary">+ Tambah Post</a>
                 </div>
 
                 <table class="table table-striped">
@@ -52,7 +52,7 @@
                             <td>{{ $item-> excerpt }}</td>
                             <td>{{ $item-> body }}</td>
                             <td>
-                                <a href='' class="btn btn-warning btn-sm">Edit</a>
+                                <a href='{{ url ('postingan/'. $item->title) }}' class="btn btn-warning btn-sm">Edit</a>
                                 <a href='' class="btn btn-danger btn-sm">Del</a>
                             </td>
                         </tr>

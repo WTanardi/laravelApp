@@ -92,7 +92,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/kbs1.jpg" class="d-block w-100" alt="..." />
+          <img src="/images/kbs1.webp" class="d-block w-100" alt="..." />
           <div class="carousel-caption">
             <h5>Kebun Binatang Surabaya</h5>
             {{-- @auth
@@ -106,7 +106,7 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="images/Kya-kya1.jpg" class="d-block w-100" alt="..." />
+          <img src="/images/Kya-kya1.webp" class="d-block w-100" alt="..." />
           <div class="carousel-caption">
             <h5>Kya-Kya</h5>
             <p>
@@ -118,7 +118,7 @@
         </div>
         <div class="carousel-item">
           <img
-            src="images/KebunBibitWonorejo1.jpg"
+            src="images/KebunBibitWonorejo1.webp"
             class="d-block w-100"
             alt="..."
           />
@@ -168,7 +168,7 @@
           <div class="col-lg-6 col-md-12 col-12 d-flex justify-content-start konten-col">
             <div class="konten-explore position-relative">
               <a href="jelajahi.html">
-                <img src="images/TamanBungkul1.jpg" alt="" />
+                <img src="images/TamanBungkul1.webp" alt="" />
               </a>
               <div class="isi-img position-absolute top-0 bottom-0 start-0 end-0">
                 <div class="position-absolute top-50 start-50 translate-middle text-center">
@@ -178,7 +178,7 @@
             </div>
             <div class="konten-explore position-relative">
               <a href="jelajahi.html">
-                <img src="images/TamanBungkul1.jpg" alt="" />
+                <img src="images/TamanBungkul1.webp" alt="" />
               </a>
               <div class="isi-img position-absolute top-0 bottom-0 start-0 end-0">
                 <div class="position-absolute top-50 start-50 translate-middle text-center">
@@ -188,7 +188,7 @@
             </div>
             <div class="konten-explore position-relative">
               <a href="jelajahi.html">
-                <img src="images/TamanBungkul1.jpg" alt="" />
+                <img src="images/TamanBungkul1.webp" alt="" />
               </a>
               <div class="isi-img position-absolute top-0 bottom-0 start-0 end-0">
                 <div class="position-absolute top-50 start-50 translate-middle text-center">
@@ -198,7 +198,7 @@
             </div>
             <div class="konten-explore position-relative">
               <a href="jelajahi.html">
-                <img src="images/TamanBungkul1.jpg" alt="" />
+                <img src="images/TamanBungkul1.webp" alt="" />
               </a>
               <div class="isi-img position-absolute top-0 bottom-0 start-0 end-0">
                 <div class="position-absolute top-50 start-50 translate-middle text-center">
@@ -220,17 +220,17 @@
         <div class="bungkus-top">
           <div class="card-top">
             <a href="jelajahi.html">
-              <img src="images/SurabayaNorthQuay1.jpg" alt="">
+              <img src="images/SurabayaNorthQuay1.webp" alt="">
             </a>
           </div>
           <div class="card-top">
             <a href="jelajahi.html">
-              <img src="images/SurabayaNorthQuay1.jpg" alt="">
+              <img src="images/SurabayaNorthQuay1.webp" alt="">
             </a>
           </div>
           <div class="card-top">
             <a href="jelajahi.html">
-              <img src="images/SurabayaNorthQuay1.jpg" alt="">
+              <img src="images/SurabayaNorthQuay1.webp" alt="">
             </a>
           </div>
         </div>
